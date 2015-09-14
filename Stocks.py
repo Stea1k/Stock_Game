@@ -220,7 +220,14 @@ class StockMarketGame():
         self.marketTrends.append(bull)
 
     def setCurrentTrend(self):
-        self.currentTrend = random.randint(0, 2)
+        val = random.randint(0, 99)
+        if val < 30:
+            self.currentTrend = 0
+        elif val >= 30 and val < 60:
+            self.currentTrend = 1
+        else:
+            self.currentTrend = 2
+
 
     def resetStockChanges(self):
         for i in range(0, 5):
