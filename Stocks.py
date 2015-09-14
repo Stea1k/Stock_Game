@@ -220,10 +220,10 @@ class StockMarketGame():
         self.marketTrends.append(bull)
 
     def setCurrentTrend(self):
-        val = random.randint(0, 99)
-        if val < 30:
+        val = random.randint(0, 6)
+        if val == 0:
             self.currentTrend = 0
-        elif val >= 30 and val < 60:
+        elif 1 <= val < 4:
             self.currentTrend = 1
         else:
             self.currentTrend = 2
